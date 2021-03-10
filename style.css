@@ -1,0 +1,119 @@
+body{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+    .container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        
+    }
+        .card {
+            grid-column: 2;
+            display: grid;
+            grid-template-rows: repeat(50px, 1fr, 1fr);
+            grid-template-columns: minmax(300px, auto);
+            gap: 5px;
+            background-color: rgb(221, 221, 221);
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow:1px 1px 1px 0px rgba(0, 0, 0, 0.4), -1px 1px 1px 0px rgba(61, 15, 15, 0.4)/* offset-x | offset-y | blur-radius | spread-radius | color */
+        }
+            .adding-task {
+                padding: 0px 10px;
+                grid-row: 1;
+                display: grid;
+                grid-template-columns: repeat(5,1fr) ;
+                grid-template-rows: repeat(2, 1fr);
+            }
+                h1 {
+                    grid-row: 1;
+                    grid-column: 1/6;
+                    text-align: center;
+                    margin-top: 0px;
+                    font-size: 28px;
+                }
+                form {
+                    grid-column: 1/6;
+                    display: grid;
+                    grid-template-columns: repeat(7,1fr);
+                    gap: 2px;
+                }
+                    input {
+                        grid-column: 1/7;
+                        padding: 4px;
+                        height: 12px;
+                        font-size: 12px;
+                        
+                    }
+                        .input-task:focus {
+                            outline: none;
+                    }
+                    button {
+                        grid-column: 7/8;
+                        font-size: 14px;
+                        font-weight: bold;
+                        height: 24px;
+                        margin: 0px 0px 0px 5px;
+                    }
+
+            .my-tasks-container {
+                border: 1px solid #979595;
+                border-radius: 5px;
+                grid-row: 2/4;
+                display: flex;
+                flex-direction: column;
+                padding: 0px 10px;
+            }
+
+                h2 {
+                    font-size: 20px;
+                    text-align: center;
+                }
+
+                .input-filter {
+                    display: none;
+                    border: none;
+                    height: 18px;
+                }
+
+                    .input-filter:focus {
+                        outline-style: none;
+                    }
+
+                ul {
+                    width: 100%;
+                    padding: 0px;
+                    margin: 10px 0px;
+                }
+
+                    li {
+                        background-color: whitesmoke;
+                        margin: 3px 0px;
+                        padding: 4px;
+                        list-style: none;
+                        border: 1px solid #979595;
+                        font-size: 12px;
+                    }
+                        li .check {
+                            float: right;
+                            margin: 0px 5px;
+                            width: 14px;
+                            
+                        }
+
+                        li .bin{
+                            float: right;
+                            margin: 0px 5px;
+                            width: 12px;
+                        }
+                
+                .btn-clearall {
+                    background-color: #111;
+                    color: whitesmoke;
+                    text-decoration: none;
+                    font-size: 14px;
+                    text-align: center;
+                    padding: 4px;
+                    margin: 20px 30%;
+                }
+
+                       
